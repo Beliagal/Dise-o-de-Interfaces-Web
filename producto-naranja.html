@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle: Naranjas de Zumo - Fresco & Más</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/product_detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="product-detail-page">
+    <div class="top-notice">
+        <div class="container">
+            Envío gratis a partir de 50€
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Fresco & Más</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Lista de Deseos</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail-container">
+                    <div class="product-gallery">
+                        <img src="images/naranja.jpg" alt="Naranjas de Zumo en detalle">
+                    </div>
+                    <div class="product-info-panel">
+                        <h1>Naranjas de Zumo (1kg)</h1>
+                        <p class="stock-status">✅ En Stock</p>
+                        <div class="ratings">
+                            <span class="rating-star">★</span>
+                            <span class="rating-star">★</span>
+                            <span class="rating-star">★</span>
+                            <span class="rating-star">★</span>
+                            <span class="rating-star">★</span>
+                            (5.0 de 5 - 18 valoraciones)
+                        </div>
+
+                        <div class="price-box">
+                            <span class="current-price">1,99 €</span>
+                            <span class="unit-price">Precio por kg: 1,99 €</span>
+                        </div>
+
+                        <div class="quantity-selector-container">
+    <div class="quantity-selector">
+        <button class="quantity-btn minus-btn">-</button>
+        <input type="number" class="quantity-input" value="1" min="1" data-price="1.99">
+        <button class="quantity-btn plus-btn">+</button>
+    </div>
+    <div class="total-price-box">
+        <p>Total:</p>
+        <span id="total-price" class="current-price">1,99 €</span>
+    </div>
+</div>
+
+<button class="add-to-cart-btn" aria-label="Añadir Naranjas de Zumo a la cesta">Añadir a la Cesta</button>
+
+                        <div class="description-box">
+                            <h2>Descripción del Producto</h2>
+                            <p>Naranjas de la mejor calidad, perfectas para zumo o para comer al natural. Dulces y jugosas, una fuente de vitamina C esencial.</p>
+                            
+                            <h3>Información Nutricional (por 100g)</h3>
+                            <ul>
+                                <li>Calorías: 47 kcal</li>
+                                <li>Grasas: 0.2 g</li>
+                                <li>Carbohidratos: 12 g</li>
+                                <li>Vitamina C: 53 mg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="ratings-section">
+                    <h2>Opiniones de Clientes</h2>
+                    <div class="review-card">
+                        <strong>Elena S.</strong> - <span class="rating-star">★★★★★</span>
+                        <p>Naranjas muy frescas y con mucho zumo. El precio es inmejorable.</p>
+                    </div>
+                    <div class="review-card">
+                        <strong>Carlos P.</strong> - <span class="rating-star">★★★★★</span>
+                        <p>Llegaron en perfecto estado. Ideales para el desayuno.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Supermercado Fresco & Más. Todos los derechos reservados.</p>
+            <p>Trabajo de Grado - Desarrollo de Aplicaciones Web</p>
+        </div>
+    </footer>
+
+    <script src="js/quantity_selector.js"></script>
+    <script src="js/cart_manager.js"></script>
+
+    <!-- Icono Flotante del Carrito -->
+    <button id="cart-icon" class="cart-icon" aria-label="Abrir cesta de la compra">
+        🛒<span id="cart-count" class="cart-count" aria-live="polite">0</span>
+    </button>
+
+    <!-- Modal del Carrito (Estructura) -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Tu Cesta de la Compra</h2>
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Los productos se añadirán aquí con JavaScript -->
+                <p class="empty-cart-message">Tu cesta está vacía.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Total Estimado: <span id="cart-total">0,00 €</span></p>
+                <button class="btn-cta checkout-btn" aria-label="Finalizar compra (Simulado)">Finalizar Compra (Simulado)</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

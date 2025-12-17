@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Fresco & Más</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+    <div class="top-notice">
+        <div class="container">
+            Envío gratis a partir de 50€
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Fresco & Más</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Lista de Deseos</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="container">
+                <h1 class="animated-text">¡Grandes Descuentos!</h1>
+                <p>Las ofertas terminan en:</p>
+                <div id="countdown" class="countdown"></div>
+                <a href="#products" class="btn-cta" aria-label="Ver todas las ofertas de la sección de productos">Ver Todas las Ofertas</a>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container">
+                <h2>Explora Nuestras Categorías</h2>
+                <div class="category-grid">
+                    <!-- Categoría de Ofertas (Rombo) -->
+                    <div class="category-card offer-card">
+                        <img src="images/ofertas.png" alt="Ofertas">
+                        <h3>Ofertas</h3>
+                    </div>
+                    <!-- Categorías Principales (Círculo) -->
+                    <div class="category-card">
+                        <img src="images/frescos.png" alt="Frescos">
+                        <h3>Frescos</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/despensa.png" alt="Despensa">
+                        <h3>Despensa</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/refrigerados.png" alt="Refrigerados">
+                        <h3>Refrigerados</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/bebidas.png" alt="Bebidas">
+                        <h3>Bebidas</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/hogar.png" alt="Hogar">
+                        <h3>Hogar</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="container">
+                <h2>Productos Destacados</h2>
+                <div class="product-grid">
+                    <!-- Producto Destacado 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/manzanas.jpg" alt="Manzanas Fuji">
+                            <span class="discount-badge">-15%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Manzanas Fuji (1kg)</h3>
+                            <p class="product-description">Crujientes y dulces, perfectas para cualquier momento del día.</p>
+                            <div class="product-price">
+                                <span class="current-price">2,50 €</span>
+                                <span class="original-price">2,95 €</span>
+                            </div>
+                            <a href="producto-manzana.html" class="btn-details">Ver Detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Producto Destacado 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/naranja.jpg" alt="Naranjas de Zumo">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Naranjas de Zumo (1kg)</h3>
+                            <p class="product-description">Naranjas frescas, perfectas para zumo o para comer al natural.</p>
+                            <div class="product-price">
+                                <span class="current-price">1,99 €</span>
+                            </div>
+                            <a href="producto-naranja.html" class="btn-details">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Supermercado Fresco & Más. Todos los derechos reservados.</p>
+            <p>Trabajo de Grado - Desarrollo de Aplicaciones Web</p>
+        </div>
+    </footer>
+
+    <script src="js/countdown.js"></script>
+    <script src="js/cart_manager.js"></script>
+
+    <!-- Icono Flotante del Carrito -->
+    <button id="cart-icon" class="cart-icon" aria-label="Abrir cesta de la compra">
+        🛒<span id="cart-count" class="cart-count" aria-live="polite">0</span>
+    </button>
+
+    <!-- Modal del Carrito (Estructura) -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Tu Cesta de la Compra</h2>
+            <div id="cart-items-list" class="cart-items-list">
+                <!-- Los productos se añadirán aquí con JavaScript -->
+                <p class="empty-cart-message">Tu cesta está vacía.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Total Estimado: <span id="cart-total">0,00 €</span></p>
+                <button class="btn-cta checkout-btn" aria-label="Finalizar compra (Simulado)">Finalizar Compra (Simulado)</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
